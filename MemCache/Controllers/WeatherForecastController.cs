@@ -23,9 +23,9 @@ namespace MemCache.Controllers
         }
 
         [HttpPost("GetCache")]
-        public IActionResult GetCache()
+        public IActionResult GetCache(string key)
         {
-            var found = _memoryCache.TryGetValue("key1", out var value);
+            var found = _memoryCache.TryGetValue(key, out var value);
             return Ok(found ? value : "");
         }
     }
