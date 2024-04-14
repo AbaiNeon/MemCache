@@ -19,6 +19,7 @@ namespace MemCache.Controllers
         public IActionResult SetCache()
         {
             var asd = 0;
+            var test = 0;
             _memoryCache.Set("key1", "value1");
             return Ok();
         }
